@@ -5,35 +5,29 @@ import java.util.Scanner;
 
 public class Ejercicio1ParaCambiar {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-         Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 
-        System.out.println("Por favor introduzca un numero entero");
-        int entero1 = sc.nextInt();
-        System.out.println("Por favor introduzca un segundo numero entero");
-        int entero2 = sc.nextInt();
+		System.out.println("Por favor introduzca un numero entero");
+		int numero1 = sc.nextInt();
+		System.out.println("Por favor introduzca un segundo numero entero");
+		int numero2 = sc.nextInt();
 
-        int menor = 0;
-        int mayor = 0;
+		if(numero1 > numero2) {
+			System.out.println("El segundo número debe ser mayor que el primero: ");
+			numero2 = sc.nextInt();
+		}
 
-        if (entero1 < entero2) {
-            menor = entero1;
-            mayor = entero2;
-        } else {
-            menor = entero2;
-            mayor = entero1;
-        }
+		System.out.println("Los numeros comprendidos entre el " + numero1 + " y el " + numero2 + " son : ");
+		
+		int resultado = 0;
+		for (int i = menor; i <= mayor; i++) {
+			resultado = 1;
+			System.out.println(i + " ");
+		}
+		sc.close();
 
-        System.out.println("Los numeros comprendidos entre el " + menor + " y el " + mayor + " son : ");
+	}
 
-        int resultado = 0;
-        for (int i = menor; i <= mayor; i++) {
-            resultado = 1;
-            System.out.println(i + " ");
-        }
-        sc.close();
-    
-    }
-    
 }
